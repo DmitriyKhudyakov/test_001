@@ -41,8 +41,8 @@ def plot_data(c, data, title):
     plt.show()
 
 
-def print_data(c, data):
-    print("Значения коэффициентов полинома: ")
+def print_data(c, data, title):
+    print("Значения коэффициентов полинома для " + title + ": ")
     i = 0
     for c_curr in c:
         i += 1
@@ -54,5 +54,5 @@ def run(data, titles):
     global N
     for curr_data, curr_title in zip(data, titles):
         c = apr.calc(curr_data, N)
-        print_data(c, curr_data)
+        print_data(c, curr_data, curr_title)
         plot_data(c, curr_data, curr_title)
